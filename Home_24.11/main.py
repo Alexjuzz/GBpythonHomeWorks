@@ -121,3 +121,4 @@ import random as r
 #     a-=1
    
 # print(list)
+
