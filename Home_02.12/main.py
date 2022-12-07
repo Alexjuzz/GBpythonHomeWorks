@@ -48,4 +48,4 @@ print(list_val)
 #     if count  ==1:
 #         result_val.append(list_val[i])     
 # print(result_val)
-
+s
