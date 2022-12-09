@@ -25,9 +25,9 @@ import random
 
 # 3. Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся элементов исходной последовательности.
 
-sizelist = int(input("Введите размер листа: "))
-list_val = [random.randint(0, 10) for _ in range(sizelist)]
-print(list_val)
+# sizelist = int(input("Введите размер листа: "))
+# list_val = [random.randint(0, 10) for _ in range(sizelist)]
+# print(list_val)
 # result_list = []
 # for i in range(0,len(list_val)):
 #     if list_val.count(list_val[i])== 1:
@@ -48,4 +48,3 @@ print(list_val)
 #     if count  ==1:
 #         result_val.append(list_val[i])     
 # print(result_val)
-s
