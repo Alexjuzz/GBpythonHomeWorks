@@ -1,15 +1,14 @@
-from config import bot_token as bt
+
 import telebot as t
 import fucn as f
 from random import choice as ch
 
 
-
-
-
-
-bot = t.TeleBot(bt)
-
+def read_ini():
+    with open('D:\\GBPython\\GBpythonHomeWorks\\GBpythonHomeWorks\\home_gb_bot.tg_2.0\\token.ini','r', encoding='utf-8') as file:
+        bot = file.read()
+        return bot
+bot = t.TeleBot(read_ini())
 @bot.message_handler(commands=['start'])
 def button(message):
     markup = t.types.ReplyKeyboardMarkup(resize_keyboard=True)

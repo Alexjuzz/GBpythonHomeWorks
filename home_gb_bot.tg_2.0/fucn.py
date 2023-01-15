@@ -1,5 +1,4 @@
 import requests 
-import json
 from random import choice as ch
 
 
@@ -35,6 +34,4 @@ def get_numb_API(numb_math_or_month = None,type_val = None, day_val = None,rando
     except ValueError:
             print("Ou. Try again")
      
-# print(get_numb_API(2,'date',5))
-# print(get_numb_API(5,'math'))
-# print(get_numb_API(5,'trivia'))
+
