@@ -28,8 +28,11 @@ class tictakboard :
         print(f'{self.board[0]}\n{self.board[1]}\n{self.board[2]}\n')
 
     def make_move(self,coordinate_x,coordinate_y):
-       
-        if  not self.check_winner(self.win_position_ROW):
+        win_ROW = self.check_winner(self.win_position_COL)
+        win_COL = self.check_winner(self.win_position_ROW)
+        print(self.count)
+        if   win_ROW and win_COL:
+            self.count = self.count +1
             simbol = ''
             if self.count % 2  == 0 :
                 simbol = 'X'
@@ -55,29 +58,37 @@ class tictakboard :
             else :
                 print(f"{coordinate_x} {coordinate_y}  <- Клетка занята {self.board[coordinate_x-1][coordinate_y-1]}" )
                 self.count = self.count-1
+            if   self.count == 9:
+                print('Draw ! ')
             
-            self.count = self.count +1
 
     def check_winner(self,s):
-        b = False
+          
+      
         for _ in s :
             if _ == -3 or _ == 3:
                 if _ == 3:
                     print("win X")
-                    b = True
+                    return False
                 else: 
                     print('win 0')
-                    b = True
-        return b
+                    return False
+        return True
 
 
 a = tictakboard()
 a.new_game()
-step = 8
+
 a.make_move(1,1)
 a.make_move(2,1)
 a.make_move(1,2)
+
 a.make_move(2,2)
 a.make_move(1,3)
-a.get_field()
 a.make_move(2,3)
+
+# a.make_move(3,1)
+# a.make_move(3,2)
+# a.make_move(3,3)
+# # print(a.count)
+a.get_field()
