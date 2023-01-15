@@ -30,7 +30,6 @@ class tictakboard :
     def make_move(self,coordinate_x,coordinate_y):
         win_ROW = self.check_winner(self.win_position_COL)
         win_COL = self.check_winner(self.win_position_ROW)
-        print(self.count)
         if   win_ROW and win_COL:
             self.count = self.count +1
             simbol = ''
@@ -61,10 +60,7 @@ class tictakboard :
             if   self.count == 9:
                 print('Draw ! ')
             
-
     def check_winner(self,s):
-          
-      
         for _ in s :
             if _ == -3 or _ == 3:
                 if _ == 3:
